@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Salvezza – Musica Cattolica. Ascolta e scarica gratuitamente i brani in italiano, inglese e francese.">
+  <title>Alex Salvezza | Musica Cattolica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero" id="top">
+  <img src="assets/hero-top.jpg" alt="Alex Salvezza – Musica Cattolica">
+</header>
+
+<nav class="language-nav" aria-label="Navigazione per lingua">
+  <a href="#italiano">ITA</a>
+  <a href="#english">ENG</a>
+  <a href="#francais">FRA</a>
+</nav>
+
+<main>
+  <section class="intro">
+    <div class="intro-accordions">
+      <details class="intro-accordion">
+        <summary>🇮🇹 <span>PRESENTAZIONE DEL PROGETTO — ITA</span></summary>
+        <div class="intro-content">
+          <p>Questa è una raccolta di musica cattolica pensata come alternativa alla musica contemporanea e al degrado dei valori etici e morali. Si tratta di un progetto autoprodotto, senza fini di lucro. Per favorire la riflessione e l'incontro con Dio attraverso la musica.</p>
+        </div>
+      </details>
+
+      <details class="intro-accordion">
+        <summary>🇬🇧 <span>PROJECT PRESENTATION — ENG</span></summary>
+        <div class="intro-content">
+          <p>This is a collection of Catholic music conceived as an alternative to contemporary music and the degradation of ethical and moral values. It is a self-produced, non-profit project. Its purpose is to encourage reflection and an encounter with God through music.</p>
+        </div>
+      </details>
+
+      <details class="intro-accordion">
+        <summary>🇫🇷 <span>PRÉSENTATION DU PROJET — FRA</span></summary>
+        <div class="intro-content">
+          <p>Il s'agit d'une collection de musique catholique conçue comme une alternative à la musique contemporaine et à la dégradation des valeurs éthiques et morales. Il s'agit d'un projet autoproduit, sans but lucratif. Pour favoriser la réflexion et la rencontre avec Dieu à travers la musique.</p>
+        </div>
+      </details>
+    </div>
+
+    <a href="#" class="presentation-download" onclick="downloadPresentations(); return false;">Scarica le presentazioni del progetto</a>
+  </section>
+
+  <form class="search-wrap" id="songSearchForm" role="search" onsubmit="return false;">
+    <label for="songSearch">Cerca una canzone</label>
+    <div class="search-controls">
+      <input id="songSearch" type="search" placeholder="Scrivi il titolo..." autocomplete="off">
+      <button type="button" id="songSearchButton">CERCA</button>
+      <button type="button" id="songSearchClear" class="search-clear">×</button>
+    </div>
+  </form>
+
+  <section class="language-section" id="italiano">
+    <div class="section-heading">
+      <span>01</span>
+      <h1>ITALIANO</h1>
+    </div>
+    <div class="songs" id="songs-ita"></div>
+  </section>
+
+  <section class="language-section" id="english">
+    <div class="section-heading">
+      <span>02</span>
+      <h1>ENGLISH</h1>
+    </div>
+    <div class="songs" id="songs-eng"></div>
+  </section>
+
+  <section class="language-section" id="francais">
+    <div class="section-heading">
+      <span>03</span>
+      <h1>FRANÇAIS</h1>
+    </div>
+    <div class="songs" id="songs-fra"></div>
+  </section>
+
+  <section class="download-all">
+    <div class="download-symbol">↓</div>
+    <h1>SCARICA L'INTERA RACCOLTA</h1>
+    <p>Tutti i brani in un unico file.</p>
+    <a href="https://drive.google.com/file/d/1KtiQ6Z0sFx5FspguyM8sk4JKpFff9ws0/view?usp=sharing" download class="download-all-button">
+      DOWNLOAD ALL MP3 - ZIP
+    </a>
+  </section>
+
+  <section class="license-section" aria-labelledby="license-title">
+    <div class="license-accordions">
+      <details class="license-accordion">
+        <summary>🇮🇹 <span>🎵 INFORMAZIONI SULLA LICENZA D'USO</span></summary>
+        <div class="license-content">
+          <p>Questi brani musicali sono rilasciati sotto licenza internazionale Creative Commons Attribuzione - Non opere derivate 4.0 (CC BY-ND 4.0).</p>
+          <p><strong>Cosa puoi fare (anche per scopi commerciali):</strong></p>
+          <ul>
+            <li>Puoi condividere, ascoltare e diffondere liberamente questi brani.</li>
+            <li>È consentito l'uso commerciale: questi brani possono essere riprodotti liberamente come musica d'ambiente in locali commerciali, negozi, bar, attività pubbliche e all'interno di video monetizzati.</li>
+          </ul>
+          <p><strong>Condizioni obbligatorie:</strong></p>
+          <ul>
+            <li>Obbligo di attribuzione: Devi sempre citare l'autore originario inserendo il link a questo canale/sito.</li>
+            <li>Nessuna opera derivata: Devi utilizzare il brano esattamente così com'è. Non è consentito modificare, remixare, campionare (sampling) o trasformare questa musica senza previa autorizzazione scritta dell'autore.</li>
+          </ul>
+          <div class="license-credit-box">
+            <p><strong>📥 Vuoi usare questo brano nei tuoi progetti (anche commerciali)?</strong></p>
+            <p>Puoi farlo gratuitamente! Ricorda solo che non puoi modificarlo o remixarlo, e che devi inserire obbligatoriamente questo testo nei crediti:</p>
+            <p><strong>Il brano [Titolo della Canzone] è opera di Alex Salvezza (testo originale dell'autore; musica prodotta con supporto A.I. via Suno), disponibile su https://www.alexsalvezza.it e rilasciato sotto licenza CC BY-ND 4.0 (Uso commerciale consentito, nessuna modifica al brano)</strong></p>
+          </div>
+          <p>📄 Leggi il testo legale completo: <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">creativecommons.org</a></p>
+          <p>Se gestisci un locale e desideri diffondere questi brani presso la tua struttura o durante un evento, puoi scaricare la DICHIARAZIONE DI ESENZIONE DAL PAGAMENTO DEI DIRITTI D'AUTORE (NO-SIAE / NO-SCF) (ai sensi del D.P.R. n. 445 del 28 dicembre 2000) cliccando <a href="documenti/Dichiarazione_No_SIAE_CC_BY-ND.pdf" download>QUI</a>.</p>
+        </div>
+      </details>
+
+      <details class="license-accordion">
+        <summary>🇬🇧 <span>🎵 INFORMATION ABOUT THE LICENSE</span></summary>
+        <div class="license-content">
+          <p>These musical tracks are released under the international Creative Commons Attribution-NoDerivatives 4.0 license (CC BY-ND 4.0).</p>
+          <p><strong>What you can do (including for commercial purposes):</strong></p>
+          <ul>
+            <li>You may freely share, listen to and distribute these tracks.</li>
+            <li>Commercial use is permitted: these tracks may be freely played as background music in commercial premises, shops, bars, public venues, concerts and monetized videos.</li>
+          </ul>
+          <p><strong>Mandatory conditions:</strong></p>
+          <ul>
+            <li>Attribution required: You must always credit the original author by including a link to this channel/website.</li>
+            <li>No derivative works: You must use the track exactly as it is. You may not modify, remix, sample or otherwise transform this music without the author's prior written permission.</li>
+          </ul>
+          <div class="license-credit-box">
+            <p><strong>📥 Do you want to use this track in your projects (including commercial ones)?</strong></p>
+            <p>You can do so for free! Just remember that you may not modify or remix it, and that you must include the following text in the credits:</p>
+            <p><strong>The track [Song Title] is a work by Alex Salvezza (original lyrics by the author; music produced with A.I. support via Suno), available at https://www.alexsalvezza.it and released under a CC BY-ND 4.0 license (commercial use permitted, no modification of the track)</strong></p>
+          </div>
+          <p>📄 To view the license, visit: <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">https://creativecommons.org/licenses/by-nd/4.0/</a></p>
+          <p>If you manage a venue and wish to play these songs at your premises or event, you can download the DECLARATION OF EXEMPTION FROM COPYRIGHT ROYALTY PAYMENTS (NO-SIAE / NO-SCF) (pursuant to Italian Presidential Decree No. 445 of 28 December 2000) by clicking <a href="documenti/Dichiarazione_No_SIAE_CC_BY-ND.pdf" download>HERE</a>.</p>
+        </div>
+      </details>
+
+      <details class="license-accordion">
+        <summary>🇫🇷 <span>🎵 INFORMATIONS SUR LA LICENCE D’UTILISATION</span></summary>
+        <div class="license-content">
+          <p>Ces morceaux de musique sont mis à disposition sous licence internationale Creative Commons Attribution – Pas de Modification 4.0 (CC BY-ND 4.0).</p>
+          <p><strong>Ce que vous pouvez faire (y compris à des fins commerciales) :</strong></p>
+          <ul>
+            <li>Vous pouvez partager, écouter et diffuser librement ces morceaux.</li>
+            <li>L’utilisation commerciale est autorisée : ces morceaux peuvent être librement diffusés comme musique d’ambiance dans les établissements commerciaux, les magasins, les bars, les lieux publics, les concerts et les vidéos monétisées.</li>
+          </ul>
+          <p><strong>Conditions obligatoires :</strong></p>
+          <ul>
+            <li>Obligation d’attribution : Vous devez toujours mentionner l’auteur original en insérant un lien vers cette chaîne/ce site.</li>
+            <li>Aucune œuvre dérivée : Vous devez utiliser le morceau exactement tel qu’il est. Il est interdit de modifier, remixer, échantillonner (sampling) ou transformer cette musique sans l’autorisation écrite préalable de l’auteur.</li>
+          </ul>
+          <div class="license-credit-box">
+            <p><strong>📥 Vous souhaitez utiliser ce morceau dans vos projets (y compris commerciaux) ?</strong></p>
+            <p>Vous pouvez le faire gratuitement ! N'oubliez pas que vous ne pouvez pas le modifier ni le remixer, et que vous devez obligatoirement insérer le texte suivant dans les crédits :</p>
+            <p><strong>Le morceau [Titre de la chanson] est une œuvre d'Alex Salvezza (texte original de l'auteur ; musique produite avec le soutien de l'I.A. via Suno), disponible sur https://www.alexsalvezza.it et publié sous licence CC BY-ND 4.0 (utilisation commerciale autorisée, aucune modification du morceau)</strong></p>
+          </div>
+          <p>📄 Pour consulter la licence, rendez-vous sur : <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener noreferrer">https://creativecommons.org/licenses/by-nd/4.0/</a></p>
+          <p>Si vous êtes responsable d’un établissement et souhaitez diffuser ces chansons dans votre établissement ou lors de votre événement, vous pouvez télécharger la DÉCLARATION D’EXONÉRATION DU PAIEMENT DES DROITS D’AUTEUR (NO-SIAE / NO-SCF) (conformément au décret présidentiel italien n° 445 du 28 décembre 2000), en cliquant <a href="documenti/Dichiarazione_No_SIAE_CC_BY-ND.pdf" download>ICI</a>.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="blessing">BUON ASCOLTO</p>
+  <p>DIO VI BENEDICA</p>
+  <a href="privacy-policy.html" class="back-top">Privacy Policy</a><br><a href="#top" class="back-top">↑ Torna all'inizio</a>
+
+<div class="footer-disclaimer">
+  <div class="footer-disclaimer-title">© 2026 Alex Salvezza.</div>
+  <div>I testi di queste canzoni sono opera originale dell'autore.</div>
+  <div>La componente musicale è stata generata con il supporto di tecnologie AI (Suno).</div>
+  <div>Queste opere sono interamente distribuite nei termini della licenza Creative Commons</div>
+  <div>Attribuzione - Non Opere Derivate 4.0 Internazionale (CC BY-ND 4.0).</div>
+</div>
+</footer>
+
+<script src="songs.js"></script>
+<script src="script.js"></script>
+
+<script>
+function downloadPresentations() {
+  const files = [
+    "documenti/_LEGGIMI - ITA.rtf",
+    "documenti/_READ ME - ENG.rtf",
+    "documenti/_LISEZ-MOI - FRA.rtf"
+  ];
+  files.forEach((file, i) => {
+    setTimeout(() => {
+      const a = document.createElement("a");
+      a.href = encodeURI(file);
+      a.download = file.split("/").pop();
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }, i * 500);
+  });
+}
+</script>
+
+</body>
+</html>
